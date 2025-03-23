@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Admin Panel - Hemşire AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .soru {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .return-button {
+            background-color: darkgreen;
+            margin-top: 40px;
+        }
+
+        .return-button:hover {
+            background-color: green;
+        }
+
+        @media (max-width: 600px) {
+            input[type="text"] {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Yanıt Bekleyen Sorular</h2>
+
+    {% if unknowns %}
+        {% for item in unknowns %}
+        <div class="soru">
+            <strong>{{ item.soru }}</strong><br>
+            <form method="POST" action="/admin">
+                <input type="hidden" name="soru" value="{{ item.soru }}">
+                <input type="text" name="cevap" placeholder="Cevabınızı yazın..." required>
+                <br>
+                <button type="submit">Kaydet</button>
+            </form>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>Şu an cevapsız soru yok.</p>
+    {% endif %}
+
+    <a href="/">
+        <button class="return-button">🔙 Robota Dön</button>
+    </a>
+
+</body>
+</html>

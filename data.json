@@ -1,0 +1,92 @@
+{
+  "sorular": [
+    {
+      "soru": "Doktor ne zaman gelecek?",
+      "cevap": "Doktorun ziyaret saatleri sabah 08.30 ve öğleden sonra 15:30’dadır."
+    },
+    {
+      "soru": "Hasta ameliyata ne zaman gidecek?",
+      "cevap": "Ameliyat saati hastanın durumuna göre belirlenir. Doktorunuz sırası gelince servis hemşirenizle iletişime geçer. O zamana dek heemşireleriniz bilemez"
+    },
+    {
+      "soru": "Ne zaman taburcu oluyorum?",
+      "cevap": "Taburcu işlemleriniz doktorunuzun onayına bağlıdır. Lütfen bilgi almak için vizit saatini bekleyin."
+    },
+    {
+      "soru": "Doktor bizi unuttu mu?",
+      "cevap": "Doktorunuz belirlenen saatlerde vizit yapmaktadır. Lütfen bekleyin veya hemşireye danışın."
+    },
+    {
+      "soru": "Ameliyat kaç saat sürecek?",
+      "cevap": "Ameliyat süresi hastaya ve operasyonun türüne bağlı olarak değişebilir. Doktorunuz daha fazla bilgi verebilir."
+    },
+    {
+      "soru": "Ameliyat uzun sürdü, bir sıkıntı mı var?",
+      "cevap": "Bazı ameliyatlar uzun sürebilir, ancak doktorunuz ameliyat sonrası detayları paylaşacaktır."
+    },
+    {
+      "soru": "Tekli odanız yok mu?",
+      "cevap": "Tek kişilik odalar sınırlıdır. Lütfen hastane yönetimiyle görüşün."
+    },
+    {
+      "soru": "Yastık, çarşaf nereden alınıyor?",
+      "cevap": "Yastık ve çarşaflar hastane tarafından temin edilmektedir. Eksikse kat ofisinde personele danışın."
+    },
+    {
+      "soru": "Hasta kontrole ne zaman gelecek?",
+      "cevap": "Kontrol tarihi taburcu belgenizde yazmaktadır. Emin değilseniz öneri kağıdını sekreterimizden talep edin."
+    },
+    {
+      "soru": "Poliklinik / laboratuvar nerede?",
+      "cevap": "Polikliniklerimiz giriş kat ve laboratuvar 2. katta bulunmaktadır."
+    },
+    {
+      "soru": "Bir bardak çay alabilir miyim?",
+      "cevap": "Hastane kantininde sıcak içecek servisi bulunmaktadır."
+    },
+    {
+      "soru": "çayı nerden alabilirim",
+      "cevap": "kantinden."
+    },
+    {
+      "soru": "bla bla",
+      "cevap": "saçmalamayın lütfen"
+    },
+    {
+      "soru": "çay nerden alabilirim",
+      "cevap": "kantinden."
+    },
+    {
+      "soru": "yastık nerden alabilirm",
+      "cevap": "kat ofisinden. personel ordadır veya gelecektir"
+    },
+    {
+      "soru": "dktr ne zmn gelir",
+      "cevap": "8.30-9.00 ve 15.30-16.00 arası vizit saatidir. haricen ne zaman gelebileceklerini hemsireler bilemez"
+    },
+    {
+      "soru": "merhaba",
+      "cevap": "hoşgeldiniz"
+    },
+    {
+      "soru": "yastık nerden alabilirim",
+      "cevap": "kat ofisinden. personel ordadır veya gelecektir"
+    },
+    {
+      "soru": "merhaba,",
+      "cevap": "hoşgeldiniz"
+    },
+    {
+      "soru": "bilal bey ne zaman gelir",
+      "cevap": "8.30-9.00 ve 15.30-16.00 arası vizit saatidir. haricen ne zaman gelebileceklerini hemsireler bilemez"
+    },
+    {
+      "soru": "tekli oda var mı",
+      "cevap": "servisimizde tekli oda yoktur."
+    },
+    {
+      "soru": "sakat mı kalacam",
+      "cevap": "bunu vizit saatinde hekiminizle görüşmelisiniz ama bu süreçler daha fizik tedavi ile taçlanmalı."
+    }
+  ]
+}

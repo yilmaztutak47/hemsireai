@@ -1,0 +1,12 @@
+{
+  "sorular": [
+    {
+      "soru": "Hastamız ne zaman ameliyata alınacak?",
+      "cevap": "Hastanızın ne zaman alınacağı tam olarak kestirilemez."
+    },
+    {
+      "soru": "Ameliyat sonrası ağrı olacak mı?",
+      "cevap": "Ameliyat sonrası ağrı olabilir, ancak doktorunuz size uygun ağrı kesiciler verecektir."
+    }
+  ]
+}

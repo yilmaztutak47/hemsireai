@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Girişi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial; text-align: center; padding-top: 100px; }
+        input { padding: 10px; width: 250px; }
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Admin Paneli Girişi</h2>
+    <form method="POST" action="/admin-login">
+        <input type="password" name="password" placeholder="Şifre giriniz..." required>
+        <button type="submit">Giriş</button>
+    </form>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hemşire AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #chat-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 90%;
+            max-width: 600px;
+            height: 300px;
+            overflow-y: scroll;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        input {
+            width: 70%;
+            max-width: 400px;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .admin-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: darkred;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .admin-button:hover {
+            background-color: crimson;
+        }
+
+        @media (max-width: 600px) {
+            input {
+                width: 90%;
+            }
+
+            #chat-box {
+                height: 250px;
+            }
+        }
+    </style>
+
+    <script>
+        function sendMessage() {
+            var userMessage = document.getElementById("user-input").value;
+            if (!userMessage.trim()) return;
+
+            fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: userMessage })
+            })
+            .then(response => response.json())
+            .then(data => {
+                var chatBox = document.getElementById("chat-box");
+                chatBox.innerHTML += "<p><strong>Sen:</strong> " + userMessage + "</p>";
+                chatBox.innerHTML += "<p><strong>Bot:</strong> " + data.response + "</p>";
+                document.getElementById("user-input").value = "";
+                chatBox.scrollTop = chatBox.scrollHeight;
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("user-input").addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    sendMessage();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Hemşire AI</h1>
+
+    <div id="chat-box"></div>
+
+    <input type="text" id="user-input" placeholder="Mesajınızı yazın..." />
+    <br>
+    <button onclick="sendMessage()">Gönder</button>
+
+    <!-- Admin butonu -->
+    <br><br>
+    <a href="/admin">
+        <button class="admin-button">Admin Paneline Git</button>
+    </a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSS Bot</title>
+</head>
+<body>
+    <h1>Sıkça Sorulan Sorular</h1>
+    <input type="text" id="question" placeholder="Sorunuzu yazın">
+    <button onclick="getAnswer()">Sor</button>
+    <p id="answer"></p>
+
+    <script>
+        function getAnswer() {
+            let question = document.getElementById("question").value;
+            
+            fetch('/get_answer', {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({"question": question})
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("answer").innerText = data.answer;
+            })
+            .catch(error => console.error("Hata:", error));
+        }
+    </script>
+</body>
+</html>
